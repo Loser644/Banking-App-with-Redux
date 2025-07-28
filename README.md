@@ -30,4 +30,4 @@ A full-featured **Banking App** built with **React + Redux** and backed by **Fir
 ### 1. Clone the Repo
 
 ```bash
-## this fully functionable in 1 week
+## this project will start working in next 2 days 

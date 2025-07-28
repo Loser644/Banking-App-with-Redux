@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
+    overflow: scroll;
     gap: 20px;
     .textDiv{
         height: 400px; width: 500px;
@@ -60,5 +61,22 @@
     }
     .imgDiv{
         height: 400px; width: 600px;
+    }
+}
+@media (max-width:450px) {
+    .homeEl{
+        align-items: flex-start;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+    }
+    .textDiv{
+        position: absolute !important;
+        width: 80% !important;
+        opacity: 1 !important;
+        z-index: 3;
+    }
+    .imgDiv{
+        opacity: 0.6;
+        z-index: 1;
     }
 }

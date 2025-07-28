@@ -1,4 +1,5 @@
 import '../assets/style/home.css';
+import About from './about';
 export default function HomePage(params) {
 
     return(
@@ -26,6 +27,7 @@ export default function HomePage(params) {
                     <img src="https://i.postimg.cc/pXgwBBVC/result11.png" alt="" />
                 </div>
             </div>
+           
         </div>
     )
 }
