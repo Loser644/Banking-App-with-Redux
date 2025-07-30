@@ -4,7 +4,9 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
     gap: 20px;
     .textDiv{
         height: 400px; width: 500px;
@@ -79,4 +81,7 @@
         opacity: 0.6;
         z-index: 1;
     }
+}
+.homeEl::-webkit-scrollbar{
+    display: none;
 }

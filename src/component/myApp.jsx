@@ -1,6 +1,6 @@
 import {Route, Routes, useLocation} from 'react-router-dom';
 import PageTransition from '../assets/pageTransition';
-import { HomeEl } from './exComponent';
+import { HomeEl, LoginEl, WithEl } from './exComponent';
 import UserHeaderMenu from '../Page/userCom/headerMenu';
 import '../assets/style/baseStyle.css'
 import { useEffect } from 'react';
@@ -20,6 +20,8 @@ export default function MyApp(params) {
             <UserHeaderMenu/>
             <Routes>
                 <Route path='/' element={<div className='resultDiv'><HomeEl/></div>} />
+                <Route path='/Login' element={<div className='resultDiv'><LoginEl/></div>} />
+                <Route path='/Account' element={<div className='resultDiv'><WithEl/></div>} />
             </Routes>
         </PageTransition>
     )

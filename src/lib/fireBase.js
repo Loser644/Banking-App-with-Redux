@@ -1,8 +1,6 @@
-import {initializeApp} from "firebase/app";
-import {getAuth} from "firebase/auth";
-import fireBase from "firebase/compat/app";
-import 'firebase/compat/auth';
-import 'firebase/compat/database';
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getDatabase, ref } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
@@ -14,6 +12,8 @@ const firebaseConfig = {
 };
 
 //Initialize FireBase
-export const myAuth = getAuth();
-const realTimeDb = fireBase.initializeApp(firebaseConfig);
-export default realTimeDb.database().ref();
+const app = initializeApp(firebaseConfig);
+
+export const myAuth = getAuth(app);
+export const db = getDatabase(app);
+export const dbRef = ref(db);

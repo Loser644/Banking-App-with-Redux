@@ -3,13 +3,17 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import {ToastContainer} from 'react-toastify'
 import MyApp from './component/myApp'
+import { Provider } from 'react-redux'
+import myStore from './lib/store'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <Provider store={myStore}>
+      <BrowserRouter>
         <MyApp/>
     </BrowserRouter>
-    <ToastContainer
+    </Provider>
+    {/* <ToastContainer
                       position="bottom-right"
                       autoClose={2000}
                       hideProgressBar={false}
@@ -21,6 +25,6 @@ createRoot(document.getElementById('root')).render(
                       pauseOnHover
                       theme="dark"
                       toastClassName="custom-toast"
-                    />
+                    /> */}
   </StrictMode>,
 )

@@ -38,7 +38,12 @@ img,form{
         border-radius: 0px 0px 50px 0px;
         display: flex;
         align-items: center;
-
+        a{
+            all: unset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         ul{
             height: 100%; width: 100%;
             display: inline-flex;
